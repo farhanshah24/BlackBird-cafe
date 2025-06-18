@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allerta&family=Grandiflora+One&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/b-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BlackBird - Café</title>
+  </head>
+  <body>
+    <!-- ----------------------Preloader---------------------------->
+     <div id="preloader" class="preloader-overlay">
+      <div class="coffee-bounce">
+        <h1 class="icon">BlackBird</h1>
+      </div>
+    </div>
+    <!-- ----------------------Navbar---------------------------- -->
+    <div id="navbar">
+      <div class="logo">
+        <h1><a href="#home">BlackBird</a></h1>
+      </div>
+      <img
+        class="navbar-icon"
+        src="assets/navbar-icon.png"
+        alt="Menu"
+        onclick="toggleNav()"
+      />
+      <div class="sections">
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#timings">Horaires</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- -----------------------Home---------------------------- -->
+    <div id="home">
+      <h1>BlackBird</h1>
+      <p>Un café, une pause, un sourire.</p>
+    </div>
+    <!-- ------------------------About-------------------------- -->
+    <div id="about">
+      <div class="about-text">
+        <h1>Bienvenue chez BlackBird</h1>
+        <p>
+          Un lieu où vous trouverez l'alliance parfaite entre confort et
+          sophistication. Notre café est conçu pour être un havre de paix pour
+          les amateurs de café et les gourmands. Que vous recherchiez un endroit
+          chaleureux pour travailler, retrouver des amis ou simplement profiter
+          d'un moment de tranquillité, Constant. est l'endroit idéal. Savourez
+          notre carte soigneusement élaborée, composée de cafés artisanaux, de
+          pâtisseries artisanales et d'une sélection de plats gastronomiques
+          préparés à partir des meilleurs ingrédients. Nos baristas et chefs
+          passionnés s'engagent à vous offrir qualité et confort dans chaque
+          tasse et chaque assiette. <br />Rejoignez-nous chez Constant. et
+          découvrez un monde où chaque gorgée et chaque bouchée sont une
+          célébration du goût et du réconfort. Au plaisir de vous accueillir
+          bientôt !
+        </p>
+      </div>
+      <div class="about-image">
+        <div class="front-image"></div>
+        <div class="back-image"></div>
+      </div>
+    </div>
+    <!-- ------------------------Timings----------------------------- -->
+    <div id="timings">
+      <h1 class="timing-title">Horaires d'ouverture</h1>
+      <div class="times">
+        <div class="mon-tue">
+          <h2>lundi - mardi</h2>
+          <h1>8.30 -<br />17.30</h1>
+        </div>
+        <div class="separation"></div>
+        <div class="wed-fri">
+          <h2>mercredi - vendredi</h2>
+          <h1>8.30 -<br />18.00</h1>
+        </div>
+        <div class="separation"></div>
+        <div class="sat-sun">
+          <h2>samedi - dimanche</h2>
+          <h1>9.30 -<br />18.30</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------Menu-------------------------------- -->
+    <div id="menu">
+      <h1 class="menu-title">Menu</h1>
+      <div class="drinks">
+        <div class="items coffee">
+          <h1>Café</h1>
+          <ul>
+            <li>
+              <span class="item-name">Espresso</span><span class="dots"></span
+              ><span class="item-price">2.50</span>
+            </li>
+            <li>
+              <span class="item-name">Ristretto</span><span class="dots"></span
+              ><span class="item-price">2.50</span>
+            </li>
+            <li>
+              <span class="item-name">Espresso Macchato</span
+              ><span class="dots"></span><span class="item-price">2.50</span>
+            </li>
+            <li>
+              <span class="item-name">Lungo</span><span class="dots"></span
+              ><span class="item-price">2.90</span>
+            </li>
+            <li>
+              <span class="item-name">Lungo Macchato</span
+              ><span class="dots"></span><span class="item-price">2.90</span>
+            </li>
+            <li>
+              <span class="item-name">Double Espresso</span
+              ><span class="dots"></span><span class="item-price">3.90</span>
+            </li>
+            <li>
+              <span class="item-name">Flat White</span><span class="dots"></span
+              ><span class="item-price">5.00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="items tea">
+          <h1>Café</h1>
+          <ul>
+            <li>
+              <span class="item-name">Latte</span><span class="dots"></span
+              ><span class="item-price">5.50</span>
+            </li>
+            <li>
+              <span class="item-name">Cappuccino</span><span class="dots"></span
+              ><span class="item-price">5.50</span>
+            </li>
+            <li>
+              <span class="item-name">Moccaccino</span><span class="dots"></span
+              ><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Moccaccino Blanco</span
+              ><span class="dots"></span><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Caramelo</span><span class="dots"></span
+              ><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Americano</span><span class="dots"></span
+              ><span class="item-price">4.00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="food">
+        <div class="items meal">
+          <h1>Boissons</h1>
+          <ul>
+            <li>
+              <span class="item-name">Jus d'orange</span
+              ><span class="dots"></span><span class="item-price">5.00</span>
+            </li>
+            <li>
+              <span class="item-name">Thé</span><span class="dots"></span
+              ><span class="item-price">4.00</span>
+            </li>
+            <li>
+              <span class="item-name">Chai Tea Latte</span
+              ><span class="dots"></span><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Matcha Latte</span
+              ><span class="dots"></span><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Chocolat Vennois</span
+              ><span class="dots"></span><span class="item-price">5.50</span>
+            </li>
+            <li>
+              <span class="item-name">Chocolat Blanc Vennois</span
+              ><span class="dots"></span><span class="item-price">5.50</span>
+            </li>
+          </ul>
+        </div>
+        <div class="items bread">
+          <h1>Frapés</h1>
+          <ul>
+            <li>
+              <span class="item-name">Cafe</span><span class="dots"></span
+              ><span class="item-price">4.90</span>
+            </li>
+            <li>
+              <span class="item-name">Latte</span><span class="dots"></span
+              ><span class="item-price">5.50</span>
+            </li>
+            <li>
+              <span class="item-name">Moccaccino</span><span class="dots"></span
+              ><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Moccaccino Blanc</span
+              ><span class="dots"></span><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Caramelo</span><span class="dots"></span
+              ><span class="item-price">5.90</span>
+            </li>
+            <li>
+              <span class="item-name">Vanille</span><span class="dots"></span
+              ><span class="item-price">5.90</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------Gallery------------------------------ -->
+    <div id="gallery">
+      <h1 class="gallery-title">Galerie</h1>
+      <div class="gallery-images">
+        <img
+          class="gallery-image"
+          src="assets/gallery1.jpg"
+          alt="Gallery Image 1"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery2.jpg"
+          alt="Gallery Image 2"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery3.jpg"
+          alt="Gallery Image 3"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery4.jpg"
+          alt="Gallery Image 4"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery5.jpg"
+          alt="Gallery Image 5"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery6.jpg"
+          alt="Gallery Image 6"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery7.jpg"
+          alt="Gallery Image 7"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery8.jpg"
+          alt="Gallery Image 8"
+        />
+        <img
+          class="gallery-image"
+          src="assets/gallery9.jpg"
+          alt="Gallery Image 9"
+        />
+      </div>
+    </div>
+    <!-- -----------------------Contact------------------------------ -->
+     <div id="contact">
+      <div class="address">
+        <div class="logo-end">
+        <h1>BlackBird</h1>
+      </div>
+        <span
+          ><img
+            class="location-icon"
+            src="assets/location-icon.png"
+            alt="location-icon"
+          />
+          77 Rue du Temple, <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75003 Paris, France</span
+        >
+        <a
+          href=https://www.google.com/maps/place/BlackBird+Coffee/@48.8612923,2.3534596,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66fca9514ea03:0x7b7ceb9127a2ab64!8m2!3d48.8612888!4d2.3560345!16s%2Fg%2F11js66fn9z?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D
+          ><br />Voir sur la carte</a
+        >
+      </div>
+      <div class="contact-us">
+        <h1>Contactez-nous</h1>
+        <p>
+          Pour toute demande de renseignements ou commentaire, n'hésitez pas à nous contacter par e-mail ou par téléphone à l'adresse suivante :
+        </p>
+        <div>
+          <img src="assets/phone-icon.png" alt="phone-icon" />
+          <a href="tel:+33673170380">+33 6 73 17 03 80</a>
+        </div>
+        <div>
+          <img src="assets/mail-icon.png" alt="mail-icon" />
+          <a href="mailto:contact@Blackbirdcafe.com">contact@blackbirdcafe.com</a>
+        </div>
+        <div class="instagram-link">
+          <img
+            class="instagram-icon"
+            src="assets/instagram.png"
+            alt="Instagram Icon"
+          />
+          <a href="https://www.instagram.com">Instagram </a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- -----------------------Script------------------------------- -->
+    <script src="script.js"></script>
+  </body>
+</html>
