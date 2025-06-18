@@ -1,0 +1,906 @@
+html { 
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height, 60px);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+/* ------------------------------------Preloader-------------------------------- */
+#preloader{
+    font-family: "Grandiflora One";
+    color: black;
+    font-size: 60px;
+}
+@media all and (max-width: 1200px){
+    #preloader{
+        font-size: 30px;
+    }
+}
+.preloader-overlay{
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+.icon {
+  animation: pulse 1.5s infinite;
+}
+.coffee-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-15px);}
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+/* ------------------------------------Navbar----------------------------------- */
+#navbar{
+    width: 100%;
+    color: white;
+    background-color: #14100f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+.logo h1{
+    font-family: "Grandiflora One";
+}
+.logo h1 a{
+    text-decoration: none;
+    color: #ddc6b6;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+    top: 5px;
+}
+.nav-links a:hover{
+    color: #ddc6b6;
+}
+
+@media all and (max-width: 750px) {
+    #navbar{
+        padding: 5px 20px 10px 20px;
+    }
+    .navbar-icon{
+        height: 20px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .sections {
+        width: 100%;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #14100fc5;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: var(--navbar-height, 60px);
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .nav-links li a:hover{
+        color: black;
+        cursor: pointer;
+    }
+}
+@media all and (min-width: 750px) and (max-width: 1200px) {
+    #navbar{
+        padding: 10px 30px 15px 30px;
+        font-size: 20px;
+    }
+    .navbar-icon{
+        display: none;
+    }
+}
+@media all and (min-width: 1200px) {
+    #navbar{
+        padding: 10px 70px 15px 70px;
+        font-size: 20px;
+    }
+    .navbar-icon{
+        display: none;
+    }
+    .nav-links{
+        gap: 30px;
+    }
+}
+
+/* -----------------------------------------Home------------------------------------------ */
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/home-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home h1{
+    font-family: "Grandiflora One";
+    color: white;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: rgb(35, 26, 26) 1px 0 20px;
+}
+#home p{
+    font-family: sans-serif;
+    color: white;
+    font-size: 23px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media all and (max-width: 750px) {
+    #home{
+        background-position: center;
+        height: 80vh;
+    }
+    #home h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    #home p{
+        font-size: 15px;
+        margin-top: 20px;
+        color: white;
+        text-shadow: #262223 1px 0 10px;
+    }
+}
+@media all and (min-width: 751px) and (max-width: 1200px){
+    #home{
+        background-position: center;
+        height: 90vh;
+    }
+    #home h1{
+        font-size: 70px;
+        font-weight: 700;
+    }
+    #home p{
+        font-size: 18px;
+        margin-top: 20px;
+        color: white;
+    }
+}
+@media all and (min-width: 1201px) and (max-width: 1800px){
+    #home{
+        background-position: center;
+        height: 100vh;
+    }
+    #home h1{
+        font-size: 90px;
+        font-weight: 700;
+    }
+    #home p{
+        font-size: 20px;
+        margin-top: 20px;
+        color: white;
+    }
+}
+
+/* --------------------------About------------------------------ */
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddc6b6;
+}
+.about-image{
+    max-width: 300px;
+    max-height: 400px;
+}
+.front-image{
+    height: 350px;
+    width: 250px;
+    border-radius: 10px;
+    background-image: url("assets/front-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    position: relative;
+    top: 100px;
+    right: 50px;
+}
+.back-image{
+    height: 300px;
+    width: 250px;
+    border-radius: 10px;
+    background-image: url("assets/back-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 320px;
+}
+
+@media all and (max-width: 640px){
+    #about{
+        padding: 30px 20px 100px 20px;
+        flex-direction: column;
+    }
+    .about-text{
+        font-size: 18px;
+    }
+    .about-text h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+    .about-image{
+        position: relative;
+        left: 20px;
+    }
+}
+@media all and (min-width: 641px) and (max-width: 850px){
+    #about{
+        padding: 40px 40px 100px 40px;
+        flex-direction: column;
+    }
+    .about-text{
+        font-size: 20px;
+    }
+    .about-text h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 851px) and (max-width: 1400px){
+    #about{
+        padding: 40px 0 100px 0;
+        justify-content: space-around;
+    }
+    .about-text{
+        max-width: 50%;
+        font-size: 20px;
+        h1{
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media all and (min-width: 1401px){
+    #about{
+        padding: 50px 80px 130px 80px;
+        justify-content: space-around;
+    }
+    .about-text{
+        max-width: 50%;
+        font-size: 22px;
+        h1{
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* ---------------------------Timings------------------------- */
+#timings{
+    background-color: #ddc6b6;
+}
+.times{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.separation{
+    width: 2px;
+    background-color: black;
+}
+
+@media all and (max-width: 850px){
+    #timings{
+        padding: 30px 20px;
+    }
+    .timing-title{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-shadow: rgb(35, 26, 26) 1px 0 20px;
+    }
+    .times{
+        flex-direction: column;
+    }
+    .separation{
+        display: none;
+    }
+    .mon-tue, .wed-fri, .sat-sun{
+        height: 330px;
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .mon-tue, .sat-sun{
+        color: black;
+        background-color: #26222363;
+    }
+    .wed-fri{
+        color: #ddc6b6;
+        background-color: #262223;
+    }
+    .times h1{
+        font-size: 55px;
+        text-align: center;
+    }
+    .times h2{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 851px) and (max-width: 1070px){
+    #timings{
+        padding: 40px 70px;
+    }
+    .timing-title{
+        text-align: center;
+        font-size: 55px;
+        margin-bottom: 30px;
+        text-shadow: rgb(35, 26, 26) 1px 0 20px;
+    }
+    .times{
+        justify-content: space-around;
+    }
+    .separation{
+        display: none;
+    }
+    .mon-tue, .wed-fri, .sat-sun{
+        height: 250px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .mon-tue, .sat-sun{
+        color: black;
+        background-color: #26222363;
+    }
+    .wed-fri{
+        color: #ddc6b6;
+        background-color: #262223;
+    }
+    .times h1{
+        font-size: 45px;
+        text-align: center;
+    }
+    .times h2{
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 1071px) and (max-width: 1400px){
+    #timings{
+        padding: 40px 100px 70px 100px;
+    }
+    .timing-title{
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 40px;
+        text-shadow: rgb(35, 26, 26) 1px 0 20px;
+    }
+    .times{
+        justify-content: space-around;
+    }
+    .separation{
+        display: none;
+    }
+    .mon-tue, .wed-fri, .sat-sun{
+        height: 310px;
+        width: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .mon-tue, .sat-sun{
+        color: black;
+        background-color: #26222363;
+    }
+    .wed-fri{
+        color: #ddc6b6;
+        background-color: #262223;
+    }
+    .times h1{
+        font-size: 45px;
+        text-align: center;
+    }
+    .times h2{
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 1401px){
+    #timings{
+        padding: 40px 200px 100px 200px;
+    }
+    .timing-title{
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 40px;
+        text-shadow: rgb(35, 26, 26) 1px 0 20px;
+    }
+    .times{
+        justify-content: space-around;
+        background-color: #2622233c;
+        box-shadow: 0px 0px 10px 10px #2622233c;
+    }
+    .mon-tue, .wed-fri, .sat-sun{
+        height: 330px;
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .times h1{
+        font-size: 55px;
+        text-align: center;
+    }
+    .times h2{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .separation{
+        display: block;
+        height: 250px;
+    }
+}
+/* -------------------------------Menu----------------------------------- */
+
+#menu{
+    color: #ddc6b6;
+}
+#menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.drinks, .food{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items{
+    width: 100%;
+}
+.items ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dots {
+  flex: 1 1 auto;
+  border-bottom: 3px dotted #ddc6b6;
+  margin: 0 10px;
+  height: 0.8em;
+}
+
+@media all and (max-width: 850px){
+    #menu{
+        padding: 30px 20px;
+        font-size: 30px;
+    }
+    .drinks, .food{
+        flex-direction: column;
+    }
+    .menu-title{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-shadow: rgb(142, 105, 105) 1px 0 10px;
+    }
+    .items h1{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .tea h1{
+        display: none;
+    }
+    .items li{
+        padding: 15px 0;
+    }
+}
+@media all and (min-width: 851px) and (max-width: 1200px){
+    #menu{
+        padding: 40px 20px;
+        font-size: 25px;
+    }
+    .drinks, .food{
+        margin-top: 20px;
+        background-color: rgba(255, 228, 196, 0.03);
+        box-shadow: 0px 0px 10px 10px rgba(255, 228, 196, 0.03);
+    }
+    .menu-title{
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 20px;
+        text-shadow: rgb(142, 105, 105) 1px 0 14px;
+    }
+    .items{
+        padding: 0 15px;
+    }
+    .items h1{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .items li{
+        padding: 15px 0;
+    }
+}
+@media all and (min-width: 1201px) and (max-width: 1400px){
+    #menu{
+        padding: 60px 30px;
+        font-size: 30px;
+    }
+    .drinks, .food{
+        margin-top: 20px;
+        background-color: rgba(255, 228, 196, 0.03);
+        box-shadow: 0px 0px 10px 10px rgba(255, 228, 196, 0.03);
+    }
+    .menu-title{
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-shadow: rgb(142, 105, 105) 1px 0 14px;
+    }
+    .items{
+        padding: 0 20px;
+    }
+    .items h1{
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .items li{
+        padding: 16px 0;
+    }
+}
+@media all and (min-width: 1401px){
+    #menu{
+        padding: 70px 60px;
+        font-size: 35px;
+    }
+    .drinks, .food{
+        margin-top: 25px;
+        background-color: rgba(255, 228, 196, 0.03);
+        box-shadow: 0px 0px 10px 10px rgba(255, 228, 196, 0.03);
+    }
+    .menu-title{
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 25px;
+        text-shadow: rgb(142, 105, 105) 1px 0 14px;
+    }
+    .items{
+        padding: 0 100px;
+    }
+    .items h1{
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .items li{
+        padding: 18px 0;
+    }
+}
+/* --------------------------------Gallery------------------------------------- */
+
+#gallery{
+  background-color: #ddc6b6;
+  text-align: center;
+  padding: 30px 300px 50px 300px;
+}
+
+#gallery .gallery-images{
+  columns: 3;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+#gallery img{
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.gallery-title{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+@media all and (min-width: 1000px) and (max-width: 1350px){
+  #gallery{
+    padding: 30px 100px 30px 100px;
+  }
+  #gallery .gallery-images{
+  gap: 18px;
+  padding-top: 18px;
+  }
+  #gallery img{
+    margin-bottom: 18px;
+  }
+}
+@media all and (min-width: 700px) and (max-width: 999px){
+  #gallery{
+    padding: 30px 60px 30px 60px;
+  }
+  #gallery .gallery-images{
+  columns: 3;
+  gap: 18px;
+  padding-top: 18px;
+  }
+  #gallery img{
+    margin-bottom: 18px;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 699px){
+  #gallery{
+    padding: 30px 20px 30px 20px;
+  }
+  #gallery .gallery-images{
+  columns: 3;
+  gap: 10px;
+  padding-top: 10px;
+  }
+  #gallery img{
+    margin-bottom: 10px;
+  }
+  .gallery-title{
+    font-size: 50px;
+  }
+}
+@media all and (max-width: 500px){
+  #gallery{
+    padding: 30px 20px 30px 20px;
+  }
+  #gallery .gallery-images{
+  columns: 2;
+  gap: 10px;
+  padding-top: 10px;
+  }
+  #gallery img{
+    margin-bottom: 10px;
+  }
+  .gallery-title{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+/* ------------------------------------Contact---------------------------------- */
+#contact{
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.logo-end{
+    color: #ddc6b6;
+    font-size: 40px;
+    font-family: "Grandiflora One";
+}
+.location-icon{
+  height: 40px;
+  margin-right: 0px;
+  position: relative;
+  top: 24px;
+}
+.address{
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.contact-us{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.contact-us img{
+  height: 30px;
+  position: relative;
+  top: 8px;
+  margin-right: 5px;
+}
+.contact-us a{
+  text-decoration: none;
+  font-size: 24px;
+}
+
+@media all and (max-width: 450px){
+  #contact{
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .logo-end{
+    font-size: 25px;
+  }
+  .contact-us{
+    font-size: 18px;
+    margin-top: 40px;
+    h1{
+        margin-bottom: 10px;
+    }
+  }
+  .contact-us img{
+    height: 20px;
+    position: relative;
+    margin-right: 5px;
+  }
+    .contact-us a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+}
+
+@media all and (min-width: 451px) and (max-width: 720px){
+  #contact{
+    flex-direction: column;
+    padding: 40px 40px;
+  }
+  .logo-end{
+    font-size: 25px;
+  }
+  .contact-us{
+    width: 60%;
+    font-size: 18px;
+    margin-top: 40px;
+    h1{
+        margin-bottom: 10px;
+    }
+  }
+  .contact-us img{
+    height: 20px;
+    position: relative;
+    margin-right: 5px;
+  }
+    .contact-us a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+}
+
+@media all and (min-width: 721px) and (max-width: 1100px){
+  #contact{
+    padding: 40px 20px;
+    justify-content: space-around;
+  }
+  .logo-end{
+    font-size: 25px;
+  }
+  .contact-us{
+    width: 50%;
+    font-size: 18px;
+    h1{
+        margin-bottom: 10px;
+    }
+  }
+  .contact-us img{
+    height: 20px;
+    position: relative;
+    margin-right: 5px;
+  }
+    .contact-us a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+}
+@media all and (min-width: 1101px) and (max-width: 1700px){
+  #contact{
+    padding: 40px 50px;
+    justify-content: space-around;
+  }
+  .logo-end{
+    font-size: 35px;
+  }
+  .contact-us{
+    width: 40%;
+    font-size: 20px;
+    h1{
+        margin-bottom: 10px;
+    }
+  }
+  .contact-us img{
+    height: 23px;
+    position: relative;
+    margin-right: 5px;
+  }
+    .contact-us a{
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+}
+@media all and (min-width: 1701px){
+  #contact{
+    padding: 50px 80px;
+    justify-content: space-around;
+  }
+  .logo-end{
+    font-size: 40px;
+  }
+  .contact-us{
+    width: 40%;
+    font-size: 20px;
+    h1{
+        margin-bottom: 10px;
+    }
+  }
+  .contact-us img{
+    height: 25px;
+    position: relative;
+    margin-right: 5px;
+  }
+    .contact-us a{
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+    top: 5px;
+}
+}
